@@ -10,7 +10,7 @@ def ftpupload(iname):
 	f = ftplib.FTP()
 	f.connect(host,port)
 	f.login(user, passw)
-	#session = ftplib.FTP('s1.ebateam.eu','mogyiftp','asdasd123')
+	
 	file = open('/home/pi/Weather/Images/{}'.format(iname),'rb')                  # file to send
 	#print('/home/pi/Weather/{}'.format(iname))
 	f.storbinary('STOR weather/{}'.format(iname), file)     # send the file
